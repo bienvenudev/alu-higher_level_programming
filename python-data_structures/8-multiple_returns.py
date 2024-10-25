@@ -2,9 +2,9 @@
 
 
 def multiple_returns(sentence):
-    if sentence < 1:
-        firstchar = None
-        length = 0
+    if len(sentence) < 1:
+        first = None
+        leng = 0
     else:
         leng = len(sentence)
         first = sentence[0]
