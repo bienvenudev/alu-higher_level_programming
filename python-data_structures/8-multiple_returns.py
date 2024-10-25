@@ -8,4 +8,4 @@ def multiple_returns(sentence):
     else:
         leng = len(sentence)
         first = sentence[0]
-        return (lengt, first)
+        return (leng, first)
