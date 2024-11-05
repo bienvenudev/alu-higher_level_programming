@@ -70,11 +70,7 @@ class Rectangle:
         elif not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
         else:
-            rect1 = rect_1.area()
-            rect2 = rect_2.area()
-            if rect1 == rect_2:
+            if rect_1.area() >= rect_2.area():
                 return rect_1
-            elif rect1 > rect2:
-                return rect_1
-            elif rect2 > rect1:
+            elif rect_2 > rect_1:
                 return rect_2
