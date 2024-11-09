@@ -16,11 +16,11 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class inherits from BaseGeometry."""
+"""Rectangle class inherits from BaseGeometry."""
 
-    def __init__(self, width, height):
-        """Initialize rectangle with width and height."""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+    def init(self, width, height):
+        super().init()
+        self.integer_validator('width', width)
+        self.width = width
+        self.integer_validator('height', height)
+        self.height = height'
