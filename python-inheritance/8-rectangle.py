@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    '''raise an exception and validate value'''
+'''raise an exception and validate value'''
 
     def area(self):
         raise Exception('area() is not implemented')
@@ -19,7 +19,7 @@ class Rectangle(BaseGeometry):
 """Rectangle class inherits from BaseGeometry."""
 
     def init(self, width, height):
-         """Initialize rectangle with width and height."""
+"""Initialize rectangle with width and height."""
         super().init()
         self.integer_validator('width', width)
         self.width = width
