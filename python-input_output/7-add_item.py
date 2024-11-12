@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""Module for creating an obj from JSON file"""
 import json
 import sys 
-"""Module for creating an obj from JSON file"""
 
 
 args = sys.argv[1:]
+
 
 def save_to_json_file(my_obj, filename):
     """function for writing an object to a text file"""
