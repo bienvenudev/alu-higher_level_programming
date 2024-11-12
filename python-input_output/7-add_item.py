@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module for creating an obj from JSON file"""
 import json
-import sys 
+import sys
 
 
 args = sys.argv[1:]
