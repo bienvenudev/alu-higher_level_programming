@@ -4,6 +4,7 @@ import sys
 from os.path import exists
 from json import dump, load
 
+
 def save_to_json_file(obj, filename):
     """Write a Python object to a JSON file."""
     with open(filename, 'w', encoding='utf-8') as file:
