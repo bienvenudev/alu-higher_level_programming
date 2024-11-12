@@ -1,28 +1,21 @@
 #!/usr/bin/python3
-"""Module for creating an obj from JSON file"""
+"""
+Module that adds command-line arguments to a JSON file list.
+"""
 import sys
-from os.path import exists
-from json import dump, load
 
 
-def save_to_json_file(obj, filename):
-    """Write a Python object to a JSON file."""
-    with open(filename, 'w', encoding='utf-8') as file:
-        dump(obj, file)
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+filename = "add_item.json"
 
-def load_from_json_file(filename):
-    """Load a Python object from a JSON file."""
-    with open(filename, 'r', encoding='utf-8') as file:
-        return load(file)
+# Load the existing list from the file if it exists;
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    items = []
 
+items.extend(sys.argv[1:])
 
-filename = 'add_item.json'
-
-if exists(filename):
-    my_list = load_from_json_file(filename)
-else:
-    my_list = []
-
-my_list.extend(sys.argv[1:])
-save_to_json_file(my_list, filename)
+save_to_json_file(items, filename)
