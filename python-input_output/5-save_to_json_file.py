@@ -4,6 +4,6 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
-    """function for writing using json string"""
-    with open(filename, 'a', encoding='utf-8') as file:
-        json.dump(my_obj, file)
+    """Write an Object to a text file using JSON representation."""
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
