@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import urllib.request
 '''Python script that fetches a URL'''
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
