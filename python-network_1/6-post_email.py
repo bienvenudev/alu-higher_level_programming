@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
+"""Sends a POST request to a given URL with a given email.
+
+Usage: ./6-post_email.py <URL> <email>
+  - Displays the body of the response.
+"""
+import sys
 import requests
 
 
 if __name__ == "__main__":
-    r = requests.get("https://intranet.hbtn.io/status")
-    print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    url = sys.argv[1]
+    value = {"email": sys.argv[2]}
+
+    r = requests.post(url, data=value)
+    print(r.text)
