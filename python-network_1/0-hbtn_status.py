@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-'''a Python script that fetches a url'''
-
+"""
+Python script that fetches https://alu-intranet.hbtn.io/status
+"""
 
 from urllib import request
 
-
 if __name__ == "__main__":
     with request.urlopen(
-        "https://alu-intranet.hbtn.io/status"
-        if "https://alu-intranet.hbtn.io/status".startswith("https")
-            else "https://alu-intranet.hbtn.io/status") as response:
+            "https://alu-intranet.hbtn.io/status"
+            if "https://intranet.hbtn.io/status".startswith("https")
+            else "https://intranet.hbtn.io/status") as response:
         html = response.read()
         print("Body response:")
         print("\t- type:", type(html))
