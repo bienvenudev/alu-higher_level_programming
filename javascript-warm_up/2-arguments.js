@@ -13,4 +13,3 @@ if (argv.length == 3) {
 if (argv.length >= 4) {
   console.log('Arguments found');
 }
-
